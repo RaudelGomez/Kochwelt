@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+    <title>Kochwelt</title>
+  </head>
+  <body onload="includeHTML()">
+    <header>
+      <a class="logo-container" href="./index.html">
+        <img src="./img/logo.png" alt="icon chef hut" class="hidden-mobile" />
+        <img
+          src="./img/logo_small.png"
+          alt="icon chef hut"
+          class="d-none show-mobile small-logo-nav"
+        />
+      </a>
+      <nav w3-include-html="templates/nav.html"></nav>
+    </header>
+    <main class="padding-bottom-64">
+      <section class="daily padding-y-64">
+        <figure><img src="./img/Kaiserschmarrn-2.webp" alt="" /></figure>
+        <div class="dailys_description_and_botton">
+          <h2>Rezept des Tages</h2>
+          <div class="text_daily_recipe">
+            Kaiserschmarrn ist Dessert oder süße Hautspeise und ein Klassiker
+            unserer Küche.
+          </div>
+          <form>
+            <button>
+              <a href="./rezeptDesTages.html" alt="Rezepte öffnen"
+                >Rezept öffnen</a
+              >
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="desire padding-y-64">
+        <h4>Lust auf was Neues?</h4>
+        <div class="desire_middle">
+          <div>
+            <figure>
+              <a href="./schweinefilet.html">
+                <img src="./img/schweinelendchen.jpg" alt="" />
+                <figcaption>Schweinefilet in Joghurtsauce</figcaption></a
+              >
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <a href="./rezeptDesTages.html">
+                <img src="./img/Kaiserschmarrn-2.webp" alt="" />
+                <figcaption>Kaiserschmarrn</figcaption></a
+              >
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <a href="./carbonara.html">
+                <img src="./img/carbonara.jpg" alt="" />
+                <figcaption>Carbonara</figcaption></a
+              >
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="worth_knowing padding-y-64">
+        <h4>Pfanne vs. Wok - Was ist besser?</h4>
+        <div class="worth_knowing_text_and_img">
+          <div>
+            <p>
+              Pfannen bieten eine flache Oberfläche für Braten und Kochen,
+              während Woks mit abgerundeter Form ideal zum Rühren und Braten
+              sind. Pfannen sind vielseitig und leicht zu reinigen, während Woks
+              eine schnelle Hitzeverteilung ermöglichen. Die Wahl hängt von
+              Kochbedürfnissen und persönlichen Vorlieben ab.
+            </p>
+          </div>
+          <div><img src="./img/wok.jpg" alt="" /></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div w3-include-html="templates/footer.html"></div>
+    </footer>
+  </body>
+</html>

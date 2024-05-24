@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+    <title>Kochwelt</title>
+  </head>
+  <body onload="includeHTML()">
+    <header>
+      <a class="logo-container" href="./index.html">
+        <img src="./img/logo.png" alt="icon chef hut" />
+      </a>
+      <nav w3-include-html="templates/nav.html"></nav>
+    </header>
+    <main class="margin-horizintal-50 padding-bottom-64">
+      <section class="hero2">
+        <h1>Kaiserschmarrn</h1>
+        <div class="aot">
+          <img
+            class="border-radius-8"
+            src="./img/Kaiserschmarrn-2.webp"
+            alt="Kaiserschmarrn"
+          />
+        </div>
+      </section>
+      <section class="time-cooking">
+        <div class="minute bc-gray border-radius-8">
+          <img class="icon" src="./img/icons/clock-regular.svg" alt="Clock" />30
+          min
+        </div>
+        <div class="minute bc-gray border-radius-8">
+          <img
+            class="icon"
+            src="./img/icons/brain-solid.svg"
+            alt="Brain"
+          />simpel
+        </div>
+        <div class="minute bc-gray border-radius-8">
+          <img
+            class="icon"
+            src="./img/icons/calendar-alt-regular.svg"
+            alt="Calendar"
+          />28.09.2020
+        </div>
+      </section>
+      <section class="ingredients">
+        <div
+          id="total-ingredients-for-portions"
+          class="total-ingredients-for-portions"
+        >
+          <label for="quantity-portion">Zutaten für</label>
+          <input
+            id="quantity-portion"
+            type="number"
+            min="1"
+            value="2"
+            class="total-portions"
+          />
+          <button onclick="calcKaiser()">PORTIONEN</button>
+        </div>
+        <table id="table-ingredients" class="ingredients-table-container">
+          <tr class="bc-gray">
+            <td id="tdEggs">2</td>
+            <td></td>
+            <td>Eier</td>
+          </tr>
+          <tr>
+            <td id="tdFlour">100</td>
+            <td>g</td>
+            <td>Mehl</td>
+          </tr>
+          <tr class="bc-gray">
+            <td id="tdMilk">200</td>
+            <td>ml</td>
+            <td>Milch</td>
+          </tr>
+          <tr>
+            <td id="tdSugar">3</td>
+            <td>EL</td>
+            <td>Zucker</td>
+          </tr>
+          <tr class="bc-gray">
+            <td id="tdSalt">1</td>
+            <td>Prise</td>
+            <td>Salz</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>nach Belieben Rosinen</td>
+          </tr>
+        </table>
+      </section>
+      <section class="preparing-plate">
+        <h2>Zubereitung</h2>
+        <div class="time-cooking">
+          <div class="minute bc-gray border-radius-8">
+            <img
+              class="icon"
+              src="./img/icons/clock-regular.svg"
+              alt="Clock"
+            />Vorbereitungszeit ca. 15 min
+          </div>
+          <div class="minute bc-gray border-radius-8">
+            <img
+              class="icon"
+              src="./img/icons/clock-regular.svg"
+              alt="Clock"
+            />Zubereitungszeit ca. 15 min
+          </div>
+          <div class="minute bc-gray border-radius-8">
+            <img
+              class="icon"
+              src="./img/icons/clock-regular.svg"
+              alt="Clock"
+            />Gesamtzeit ca. 30 min
+          </div>
+        </div>
+        <div class="cooking-guide">
+          <ol>
+            <li>
+              Das Eiweiß vom Eigelb trennen und in eine kleine Rührschüssel
+              geben.
+            </li>
+            <li>
+              Eigelb mit Mehl, Zucker, Milch und Salz in einer anderen Schüssel
+              zu einem dickflüssigen Teig glatt rühren, bis keine Klumpen mehr
+              zu sehen sind.
+            </li>
+            <li>Den Teig 30 Minuten ruhen lassen.</li>
+            <li>
+              Das Eiweiß sehr steif schlagen und vorsichtig unter den Teig
+              unterheben.
+            </li>
+            <li>Fett in einer großen Pfanne erhitzen.</li>
+            <li>
+              Den Teig vorsichtig hinein gießen und 2 - 3 Minuten fest werden
+              lassen. Die Unterseite sollte schön goldbraun werden.
+            </li>
+            <li>Nach belieben Rosinen darüber streuen.</li>
+            <li>
+              Den Teig mit Hilfe eines Pfannenwenders wenden und wieder
+              goldbraun backen.
+            </li>
+            <li>
+              Mit zwei Gabeln vorsichtig in mundgerechte Stücke teilen. Mit 2 EL
+              Zucker bestreuen und noch einmal durch schwenken, damit der Zucker
+              karamellisieren kann.
+            </li>
+            <li>
+              Den warmen Kaiserschmarrn mit Puderzucker bestreuen und sofort
+              servieren. Dazu schmeckt Vanilleeis oder Apfelmus.
+            </li>
+          </ol>
+          <div>
+            <h4>NOTIZEN</h4>
+            <span
+              >Mit einer großen Portion Apfelmus serviert, schmeckt er einfach
+              nur himmlisch.</span
+            >
+          </div>
+        </div>
+      </section>
+      <section class="chef">
+        <h6>Rezept erstellt von</h6>
+        <div>
+          <figure class="avatar-chef">
+            <img src="./img/raudel2.jpg" alt="Chefs Foto" />
+          </figure>
+          <figcaption>Raudel</figcaption>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div w3-include-html="templates/footer.html"></div>
+    </footer>
+  </body>
+</html>

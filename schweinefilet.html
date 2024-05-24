@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+    <title>Kochwelt</title>
+  </head>
+  <body onload="includeHTML()">
+    <header>
+      <a class="logo-container" href="./index.html">
+        <img src="./img/logo.png" alt="icon chef hut" />
+      </a>
+      <nav w3-include-html="templates/nav.html"></nav>
+    </header>
+    <main class="margin-horizintal-50 padding-bottom-64">
+      <section class="hero2">
+        <h1>Schweinefilet in Joghurtsauce</h1>
+        <div class="aot">
+          <img
+            class="border-radius-8"
+            src="./img/schweinelendchen.jpg"
+            alt="Schweinefilet"
+          />
+        </div>
+      </section>
+      <section class="time-cooking">
+        <div class="minute bc-gray border-radius-8">
+          <img class="icon" src="./img/icons/clock-regular.svg" alt="Clock" />60
+          min
+        </div>
+        <div class="minute bc-gray border-radius-8">
+          <img
+            class="icon"
+            src="./img/icons/brain-solid.svg"
+            alt="Brain"
+          />mittel
+        </div>
+        <div class="minute bc-gray border-radius-8">
+          <img
+            class="icon"
+            src="./img/icons/calendar-alt-regular.svg"
+            alt="Calendar"
+          />09.04.2024
+        </div>
+      </section>
+      <section class="ingredients">
+        <div
+          id="total-ingredients-for-portions"
+          class="total-ingredients-for-portions"
+        >
+          <label for="quantity-portion">Zutaten für</label>
+          <input
+            id="quantity-portion"
+            type="number"
+            min="1"
+            value="2"
+            class="total-portions"
+          />
+          <button onclick="calcPorkFilets()">PORTIONEN</button>
+        </div>
+        <table id="table-ingredients" class="ingredients-table-container">
+          <tr class="bc-gray">
+            <td id="tdPorkFilets">2</td>
+            <td>kleine</td>
+            <td>Schweinefilets</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Prise</td>
+            <td>Salz</td>
+          </tr>
+          <tr class="bc-gray">
+            <td>1</td>
+            <td>Prise</td>
+            <td>Paprikapulver</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Scheibe</td>
+            <td>Mittelalter Gouda am Stück (ca. 1cm)</td>
+          </tr>
+          <tr class="bc-gray">
+            <td>1</td>
+            <td>Prise</td>
+            <td>Mehl</td>
+          </tr>
+          <tr>
+            <td id="tdOnion">1</td>
+            <td></td>
+            <td>Zwiebel</td>
+          </tr>
+          <tr class="bc-gray">
+            <td id="tdBroth">1</td>
+            <td>Teel</td>
+            <td>gekörnte Brühe</td>
+          </tr>
+          <tr>
+            <td id="tdYogurtCream">1</td>
+            <td>Becher</td>
+            <td>Sahnejoghurt</td>
+          </tr>
+          <tr class="bc-gray">
+            <td id="tdParsley">2</td>
+            <td>Eßl</td>
+            <td>gehackte Petersilie</td>
+          </tr>
+        </table>
+      </section>
+      <section class="preparing-plate">
+        <h2>Zubereitung</h2>
+        <div class="time-cooking">
+          <div class="minute bc-gray border-radius-8">
+            <img
+              class="icon"
+              src="./img/icons/clock-regular.svg"
+              alt="Clock"
+            />Zubereitungszeit ca. 30 min
+          </div>
+          <div class="minute bc-gray border-radius-8">
+            <img
+              class="icon"
+              src="./img/icons/clock-regular.svg"
+              alt="Clock"
+            />Gesamtzeit ca. 60 min
+          </div>
+        </div>
+        <div class="cooking-guide">
+          <ol>
+            <li>
+              Anhängdes Fett an den Filets/Lendchen abschneiden und die das
+              Filet umgebenden Häute ablösen.
+            </li>
+            <li>
+              Dazu das Messer unter die Haut schieben und mit etwas nach oben
+              gestellter Klinge darunter entlangfahren.
+            </li>
+            <li>
+              Die beiden Lendchen mit dem Salz und dem Paprikapulver einreiben.
+              Den Käse in dicke, etwa 4cm lange Stifte schneiden.
+            </li>
+            <li>
+              Die Käsestifte igelartig in die Lendchen einstecken, so dass sie
+              etwa zu drei Vierteln im Fleisch sind und ein Viertel
+              hervorstehen.
+            </li>
+            <li>
+              Dann die Lendchen in Mehl wenden und in einem Topf mit Butter von
+              allen Seiten hellbraun anbraten. Die Kästestife schmelzen dabei
+              außen ab.
+            </li>
+            <li>
+              Die Schweinelendchen kurz aus dem Topf nehmen und die Zwiebel
+              glasig dünsten. Den Joghurt und die gekörte Brühe dazugeben und
+              alles verühren.
+            </li>
+            <li>
+              Dann die Schnweinelndchen zurück in den Topf geben und 10-15min
+              garen.
+            </li>
+            <li>
+              Das Fleisch muss am Ende in der Mitte noch leicht rosa sein.
+            </li>
+            <li>Zun Schluss die Petersilie untermischen.</li>
+            <li>Dazu passen Spätze.</li>
+          </ol>
+        </div>
+      </section>
+      <section class="chef">
+        <h6>Rezept erstellt von</h6>
+        <div>
+          <figure class="avatar-chef">
+            <img src="./img/sascha.jpg" alt="Chefs Foto" />
+          </figure>
+          <figcaption>Sascha</figcaption>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div w3-include-html="templates/footer.html"></div>
+    </footer>
+  </body>
+</html>

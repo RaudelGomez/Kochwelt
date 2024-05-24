@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+    <title>Kochwelt</title>
+  </head>
+  <body onload="includeHTML()" class="body-danke">
+    <header>
+      <a href="./index.html" class="logo-container">
+        <img src="./img/logo.png" alt="icon chef hut" />
+      </a>
+      <nav w3-include-html="templates/nav.html"></nav>
+    </header>
+    <main class="margin-horizintal-50">
+      <section class="danke-container">
+        <h1>Danke</h1>
+        <p>Vielen Dank, dass Sie sich mit uns in Verbindung gesetzt haben</p>
+        <p>Wir melden uns so schnell wie möglich bei Ihnen zurück.</p>
+      </section>
+    </main>
+    <footer>
+      <div w3-include-html="templates/footer.html"></div>
+    </footer>
+  </body>
+</html>

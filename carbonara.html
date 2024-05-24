@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+    <title>Kochwelt</title>
+  </head>
+  <body onload="includeHTML()">
+    <header>
+      <a class="logo-container" href="./index.html">
+        <img src="./img/logo.png" alt="icon chef hut" />
+      </a>
+      <nav w3-include-html="templates/nav.html"></nav>
+    </header>
+    <main class="margin-horizintal-50 padding-bottom-64">
+      <section class="hero2">
+        <h1>Carbonara</h1>
+        <div class="aot">
+          <img
+            class="border-radius-8"
+            src="./img/carbonara.jpg"
+            alt="Carbonara"
+          />
+        </div>
+      </section>
+      <section class="time-cooking">
+        <div class="minute bc-gray border-radius-8">
+          <img class="icon" src="./img/icons/clock-regular.svg" alt="Clock" />4h
+          20 Minuten
+        </div>
+        <div class="minute bc-gray border-radius-8">
+          <img
+            class="icon"
+            src="./img/icons/brain-solid.svg"
+            alt="Brain"
+          />leicht
+        </div>
+        <div class="minute bc-gray border-radius-8">
+          <img
+            class="icon"
+            src="./img/icons/calendar-alt-regular.svg"
+            alt="Calendar"
+          />17.04.2024
+        </div>
+      </section>
+      <section class="ingredients">
+        <div
+          id="total-ingredients-for-portions"
+          class="total-ingredients-for-portions"
+        >
+          <label for="quantity-portion">Zutaten für</label>
+          <input
+            id="quantity-portion"
+            type="number"
+            min="1"
+            value="2"
+            class="total-portions"
+          />
+          <button onclick="calcCarbonara()">PORTIONEN</button>
+        </div>
+        <table id="table-ingredients" class="ingredients-table-container">
+          <tr class="bc-gray">
+            <td id="tdSpaguetti">250</td>
+            <td>g</td>
+            <td>Spaguetti</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Prise</td>
+            <td>Salz</td>
+          </tr>
+          <tr class="bc-gray">
+            <td id="tdBacon">70</td>
+            <td>g</td>
+            <td>durchwachsener Speck, mild geräuchert</td>
+          </tr>
+          <tr>
+            <td id="tdCheese">50</td>
+            <td>g</td>
+            <td>italienischer Hartkäse (z.B. Grana Padano von San Fabio)</td>
+          </tr>
+          <tr class="bc-gray">
+            <td id="tdEggs">2</td>
+            <td></td>
+            <td>Ei(er), sehr frisch (Größe M)</td>
+          </tr>
+          <tr>
+            <td id="tdWater">6</td>
+            <td>EL</td>
+            <td>Nudelwasser</td>
+          </tr>
+          <tr class="bc-gray">
+            <td>1</td>
+            <td>Prise</td>
+            <td>schwarzer Pfeffer</td>
+          </tr>
+          <tr>
+            <td id="tdParsley">2</td>
+            <td></td>
+            <td>Zweig(e) Petersilie</td>
+          </tr>
+        </table>
+      </section>
+      <section class="preparing-plate">
+        <h2>Zubereitung</h2>
+        <div class="time-cooking">
+          <div class="minute bc-gray border-radius-8">
+            <img
+              class="icon"
+              src="./img/icons/clock-regular.svg"
+              alt="Clock"
+            />Vorbereitungszeit ca. 5 min
+          </div>
+          <div class="minute bc-gray border-radius-8">
+            <img
+              class="icon"
+              src="./img/icons/clock-regular.svg"
+              alt="Clock"
+            />Zubereitungszeit ca. 15 Min
+          </div>
+          <div class="minute bc-gray border-radius-8">
+            <img
+              class="icon"
+              src="./img/icons/clock-regular.svg"
+              alt="Clock"
+            />Gesamtzeit: ca. 20 min
+          </div>
+        </div>
+        <div class="cooking-guide">
+          <ol>
+            <li>
+              Für die Spaghetti gesalzenes Wasser in einem Topf bei
+              geschlossenem Deckel zum Kochen bringen.
+            </li>
+            <li>
+              Den Speck klein schneiden oder würfeln. Die Speckstückchen in
+              einer beschichteten Pfanne bei mittlerer Hitze ca. 5 Minuten
+              braten. Würfel dabei gelegentlich wenden.
+            </li>
+            <li>
+              Mittlerweile sollte das Wasser kochen. Spaghetti hineingeben, nach
+              und nach runterdrücken und nach Packungsangaben bissfest kochen.
+            </li>
+            <li>Den Hartkäse sehr fein reiben.</li>
+            <li>
+              Mit einer Nudelzange oder Ähnlichem die Nudeln nach und nach
+              direkt aus dem heißen Kochwasser nehmen, kurz über dem Topf
+              abtropfen lassen und dann zum Speck in die Pfanne geben. Beides
+              gut mischen und leicht abkühlen lassen. Die Nudeln werden vom
+              ausgelassenen Fett überzogen und glänzen appetitlich.
+            </li>
+            <li>
+              Die Eier in einer Schüssel verquirlen, die feinen Käseraspel und
+              das Nudelwasser zufügen und alles weiter aufschlagen, bis eine
+              schlotzige Masse entsteht.
+            </li>
+            <li>
+              Die Ei-Käse-Mischung zu den leicht abgekühlten Nudeln in die
+              Pfanne geben.
+            </li>
+            <li>
+              Bei geringer Hitze die Spaghetti 1 bis 2 Min. in der Pfanne
+              schwenken. Sobald die Soße leicht eindickt, ist die Carbonara
+              servierfertig. Das Ei sollte also nicht komplett stocken.
+              <br />
+              <b>Tipp:</b> Wenn die Nudeln zu trocken sind, einfach noch etwas
+              Nudelwasser untermischen.
+            </li>
+            <li>Mit Pfeffer würzen.</li>
+            <li>
+              Die Nudeln gleichmäßig auf Tellern verteilen, mit frisch gehackter
+              Petersilie bestreuen und sofort genießen.
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="chef">
+        <h6>Rezept erstellt von</h6>
+        <div>
+          <figure class="avatar-chef">
+            <img src="./img/raudel2.jpg" alt="Chefs Foto" />
+          </figure>
+          <figcaption>Raudel</figcaption>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div w3-include-html="templates/footer.html"></div>
+    </footer>
+  </body>
+</html>

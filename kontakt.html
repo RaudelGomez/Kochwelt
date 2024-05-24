@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+    <title>Kochwelt</title>
+  </head>
+  <body onload="includeHTML()">
+    <header>
+      <a href="./index.html" class="logo-container">
+        <img src="./img/logo.png" alt="icon chef hut" />
+      </a>
+      <nav w3-include-html="templates/nav.html"></nav>
+    </header>
+    <main class="margin-horizintal-50 padding-bottom-64">
+      <div class="hero">
+        <h1>Kontakt</h1>
+        <div class="chef-pic border-radius-8"></div>
+      </div>
+
+      <div class="container-kontakt">
+        <!-- <h5>Bei Fragen und Hilfe, zögern Sie nicht uns anszuschreiben</h5> -->
+
+        <form id="kontakt-form" onsubmit="sendMail(event)">
+          <div class="full-Name-email">
+            <div>
+              <label for="first_name">Vorname</label>
+              <input
+                id="first_name"
+                type="text"
+                name="first_name"
+                placeholder="John"
+                required
+              />
+            </div>
+            <div>
+              <label for="last_name">Nachname</label>
+              <input
+                id="last_name"
+                type="text"
+                name="last_name"
+                placeholder="Smith"
+                required
+              />
+            </div>
+            <div>
+              <label for="email">E-Mail</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="john.smith@gmail.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="comments">Nachricht</label>
+            <textarea
+              id="comments"
+              cols="46"
+              rows="3"
+              name="comments"
+            ></textarea>
+          </div>
+          <div class="button-container">
+            <button type="submit">Senden</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div w3-include-html="templates/footer.html"></div>
+    </footer>
+  </body>
+</html>
